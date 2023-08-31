@@ -1,0 +1,367 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.header .nav {
+  position: fixed;
+  display: flex;
+  height: 70px;
+  width: 100vw;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.header .nav .logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+.header .nav .logo span {
+  color: blue;
+}
+.header .nav .menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.header .nav .menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.header .nav .menu-btn__burger::before, .header .nav .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: #fff;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.header .nav .menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.header .nav .menu-btn__burger::after {
+  transform: translateY(16px);
+}
+.header .nav .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.header .nav .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.header .nav .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.header .nav .nav-items {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 70px;
+  height: 100vh;
+  width: 100%;
+  left: 100%;
+  color: #fff;
+  background: #333;
+  padding: 15px;
+  transition: 0.3s ease-in-out;
+}
+.header .nav .nav-items .items {
+  list-style-type: none;
+  font-size: 3rem;
+}
+.header .nav .nav-items .items li {
+  padding: 1rem;
+  border-radius: 6px;
+}
+.header .nav .nav-items .items li a {
+  text-decoration: none;
+  color: #fff;
+}
+.header .nav .nav-items.open {
+  left: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/architecture-1857175_640.jpg);
+  background-size: cover;
+}
+.hero .hero-title {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: 30%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  color: #000;
+  font-weight: bold;
+}
+.hero .hero-title__main {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+.hero .hero-title__main span {
+  color: blue;
+}
+.hero .hero-title__text {
+  font-size: 2.5rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main .section-white {
+  background: #fff;
+}
+.main .section-white .section-title {
+  padding-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 2rem;
+}
+.main .section-white .container {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.3rem;
+}
+.main .section-white .container .wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.main .section-white .container .wrapper .box {
+  position: relative;
+  height: 250px;
+  width: 300px;
+  margin: 15px;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+.main .section-white .container .wrapper .box p {
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.main .section-white .container .wrapper .box .img {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 0;
+}
+.main .section-white .container .wrapper .box .one {
+  background-image: url(../img/aboutUs/cieplnych-small.jpg);
+}
+.main .section-white .container .wrapper .box .two {
+  background-image: url(../img/aboutUs/wentylacja-small.jpg);
+}
+.main .section-white .container .wrapper .box .three {
+  background-image: url(../img/aboutUs/air-conditioner-small.jpg);
+}
+.main .section-white .container .wrapper .box .four {
+  background-image: url(../img/aboutUs/gazowych-small.jpg);
+}
+.main .section-white .container .wrapper .box .five {
+  background-image: url(../img/aboutUs/wodociąg-small.jpg);
+}
+.main .section-white .container .wrapper .box .six {
+  background-image: url(../img/aboutUs/kanaliza-small.jpg);
+}
+.main .section-white .container .wrapper .box .seven {
+  background-image: url(../img/aboutUs/hydrant-183544_640.jpg);
+}
+.main .section-white .container .wrapper .box:hover {
+  transform: scale(1.2);
+}
+.main .section-dark {
+  background: #333;
+}
+.main .section-dark .section-title {
+  padding-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+}
+.main .section-dark .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.main .section-dark .container .card {
+  position: relative;
+  margin: 30px 30px;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+.main .section-dark .container .card .img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  transition: 0.8s;
+}
+.main .section-dark .container .card .img .card-shadow {
+  height: 100%;
+  width: 100%;
+}
+.main .section-dark .container .card .img .card-shadow h3 {
+  position: relative;
+  text-align: center;
+  top: 30%;
+  background: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #000;
+}
+.main .section-dark .container .card .one {
+  background-image: url(../img/offers/kompleks-small.jpg);
+}
+.main .section-dark .container .card .two {
+  background-image: url(../img/offers/quality-small.jpg);
+}
+.main .section-dark .container .card .three {
+  background-image: url(../img/offers/experience-small.jpg);
+}
+.main .section-dark .container .card .four {
+  background-image: url(../img/offers/build-small.jpg);
+}
+.main .section-dark .container .card .fife {
+  background-image: url(../img/offers/guarante-small.png);
+}
+.main .section-dark .container .card .text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  background-image: linear-gradient(315deg, #fee2f8 34%, rgba(221, 204, 255, 0.5333333333) 74%);
+  transition: 0.8s;
+  opacity: 0;
+  transform: rotateY(-180deg);
+}
+.main .section-dark .container .card .text P {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 30%;
+}
+.main .section-dark .container .card:hover .text {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.main .section-dark .container .card:hover .img {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+.main .section-white .container {
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 2rem;
+}
+.main .section-white .container .card {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  width: 100%;
+  background: #333;
+  border-radius: 15px;
+}
+.main .section-white .container .card .img {
+  height: 300px;
+  width: 100%;
+  background-image: url(../img/architecture-1857175_640.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.main .section-white .container .card .text {
+  padding: 2rem 1rem;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 767px) {
+  .header {
+    position: relative;
+    height: 100wh;
+    width: 100vw;
+  }
+  .header .nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100vw;
+    background: #333;
+    color: #fff;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .header .nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 3rem;
+  }
+  .header .nav .menu-btn {
+    display: none;
+  }
+  .header .nav .nav-items {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: #fff;
+    margin: 2rem;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-color: #333;
+  }
+  .header .nav .nav-items li {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .header .nav .nav-items li a {
+    text-decoration: none;
+    color: #fff;
+  }
+}/*# sourceMappingURL=main.css.map */
